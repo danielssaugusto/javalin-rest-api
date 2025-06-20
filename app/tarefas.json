@@ -6,4 +6,20 @@
   "id" : "2",
   "descricao" : "Fazer exerc�cios",
   "concluida" : false
+}, {
+  "id" : "tarefa-list-001",
+  "descricao" : "Tarefa 1",
+  "concluida" : false
+}, {
+  "id" : "tarefa-list-002",
+  "descricao" : "Tarefa 2",
+  "concluida" : true
+}, {
+  "id" : "tarefa-test-002",
+  "descricao" : "Buscar tarefa por ID",
+  "concluida" : true
+}, {
+  "id" : "tarefa-test-001",
+  "descricao" : "Criar tarefa de teste",
+  "concluida" : false
 } ]
