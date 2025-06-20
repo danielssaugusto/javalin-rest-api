@@ -1,0 +1,52 @@
+[
+  {
+    "nome": "Bruno Fraga",
+    "email": "brunofraga@email.com",
+    "idade": 25
+  },
+  {
+    "nome": "andres Saulo",
+    "email": "and.saulo@email.com",
+    "idade": 32
+  },
+  {
+    "nome": "Juliana Oliveira",
+    "email": "juh.oliveira@email.com",
+    "idade": 28
+  },
+  {
+    "nome": "Samuel Nobrega",
+    "email": "samnobrega@email.com",
+    "idade": 40
+  },
+  {
+    "nome": "Fernanda Costa",
+    "email": "fernanda.costa@email.com",
+    "idade": 30
+  },
+  {
+    "nome": "Thiago Lima",
+    "email": "thiago.lima@email.com",
+    "idade": 27
+  },
+  {
+    "nome": "Patrícia Santos",
+    "email": "patricia.santos@email.com",
+    "idade": 24
+  },
+  {
+    "nome": "Walter Almeida",
+    "email": "walteralmeida@email.com",
+    "idade": 29
+  },
+  {
+    "nome": "Mariana Smith",
+    "email": "smithmari@email.com",
+    "idade": 26
+  },
+  {
+    "nome": "Diego Martins",
+    "email": "dih.martins@email.com",
+    "idade": 33
+  }
+]
