@@ -23,19 +23,21 @@ public class AppTest {
     public void createTaskTest() {
         Javalin app = App.createApp();
 
+        String id = java.util.UUID.randomUUID().toString();
         String json = """
-            {
-                "id": "tarefa-test-001",
-                "descricao": "Criar tarefa de teste",
-                "concluida": false
-            }
-            """;
+        {
+            "id": "%s",
+            "descricao": "Criar tarefa de teste",
+            "concluida": false
+        }
+        """.formatted(id);
 
         JavalinTest.test(app, (server, client) -> {
             var response = client.post("/tarefas", json);
             assertEquals(201, response.code());
         });
     }
+
 
     @Test
     public void findTaskByIdTest() {
