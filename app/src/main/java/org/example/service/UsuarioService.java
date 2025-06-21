@@ -9,14 +9,18 @@ import java.nio.file.*;
 import java.util.*;
 
 public class UsuarioService {
+
+    // Arquivo onde os dados dos usuários serão aramazenados
     private static final String ARQUIVO_USUARIOS = "usuarios.json";
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private List<Usuario> usuarios;
 
+    // Construtor: ao instanciar a classe, carrega os usuários do arquivo
     public UsuarioService() {
         this.usuarios = carregarUsuarios();
     }
 
+    // Método privado que tenta ler o arquivo de usuários e converter para uma lista de objetos Usuario
     private List<Usuario> carregarUsuarios() {
         try {
             byte[] jsonData = Files.readAllBytes(Paths.get(ARQUIVO_USUARIOS));
@@ -26,8 +30,11 @@ public class UsuarioService {
         }
     }
 
+    // Método privado que salva a lista de usuários no arquivo JSON
     private void salvarUsuarios() {
         try {
+
+            // Escreve os dados formatados
             objectMapper.writerWithDefaultPrettyPrinter()
                     .writeValue(Paths.get(ARQUIVO_USUARIOS).toFile(), usuarios);
         } catch (IOException e) {
@@ -35,15 +42,20 @@ public class UsuarioService {
         }
     }
 
+    // Retorna a lista completa de usuários
+
     public List<Usuario> listar() {
         return usuarios;
     }
 
+    // Busca um usuário pelo e-mail
     public Optional<Usuario> buscarPorEmail(String email) {
         return usuarios.stream().filter(u -> u.getEmail().equalsIgnoreCase(email)).findFirst();
     }
 
+    // Cria um novo usuário, caso o e-mail ainda não esteja cadastrado
     public boolean criar(Usuario user) {
+        // Verifica se já existe algum usuário com o mesmo e-mail
         boolean existe = usuarios.stream().anyMatch(u -> u.getEmail().equalsIgnoreCase(user.getEmail()));
         if (existe) return false;
 
