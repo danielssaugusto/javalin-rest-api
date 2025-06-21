@@ -85,6 +85,7 @@ public class ClienteHTTP {
 
     // Método principal que executa os métodos definidos acima
     public static void main(String[] args) throws IOException {
+        // Criação dos quatro clientes HttpURLConnection
         postTarefa(); //Cria uma nova tarefa
         getTodasTarefas(); // busca todas as tarefas
         getTarefaPorId("http-task-001"); // Busca a tarefa criada pelo ID
